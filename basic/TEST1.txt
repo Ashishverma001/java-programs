@@ -1,0 +1,91 @@
+1.what is JVM AND JRE.?
+
+Ans 1.) The Java Virtual Machine (JVM) is a crucial component of the Java Runtime Environment (JRE) and is responsible for executing Java bytecode. Java programs are initially written in human-readable source code, which is then compiled into bytecode. The bytecode is a set of instructions that is not specific to any particular computer architecture, making Java a platform-independent language
+ -plateform independent.
+ - execution of bytcode.
+ - security
+The Java Runtime Environment (JRE) is a set of software tools and libraries that provides the runtime environment needed for executing Java applications. It includes the Java Virtual Machine (JVM), class libraries, and other components necessary for running Java applications, but it does not include the development tools (like compilers and debuggers) that are part of the Java Development Kit (JDK).
+
+2.What is implisi and explisit type casting with an example.?
+
+Ans2.) implicit type casting is also know as widening type casting in this the lowe data type in to higher one is known as wideening typer casting aur implcit type casting.
+the taget must be larger then the source  type.
+ example:- 
+ public class ImplicitCastingExample {
+    public static void main(String[] args) {
+        int intValue = 10;
+        long longValue = intValue;  // Implicit casting from int to long
+
+        System.out.println("int value: " + intValue);
+        System.out.println("long value after implicit casting: " + longValue);
+    }
+}
+
+explicit typr casting is aloso known as narrowing type casting in this a higher data type into a lower one is    called narrowing type casting aur explicit type  casting.it is done manually by the programer.
+ example:-
+public class ExplicitCastingExample {
+    public static void main(String[] args) {
+        double doubleValue = 10.5;
+        int intValue = (int) doubleValue;  // Explicit casting from double to int
+
+        System.out.println("double value: " + doubleValue);
+        System.out.println("int value after explicit casting: " + intValue);
+    }
+}
+
+
+3.Write a program in java to accept a unit consume and find out the charge of elicity bill.?
+  - if 0-100->5
+  - if 101-200->8
+  - if 201-above->10
+ monthly rental charge is fixed 300/mounth.
+ unit consumed.
+ rate:
+ charge
+
+Ans3.)
+import.java.util.scanner;
+ class bill
+{
+ public static void main(String arg[])
+{
+  Scanner sc= new Scanner(System.in);
+  System.out.println("Enter unit consumed");
+  int unit=sc.nextInt();
+  int rate;
+  if(unit>=0 && unit <= 100)
+ {
+   rate=5;
+   int charge =( unit * rate)+ 300;
+   System.out.println("unit consumed" + unit);
+   System.out.println("rate per unit is " + rate);
+   System.out.println("Total charge " + charge);
+
+   }
+   else if(unit >= 101 && unit <= 200)
+   {
+     rate =8;
+     int charge=(unit * rate) + 300;
+     System.out.println("unit consumed" + unit);
+     System.out.println("rate per unit is " + rate);
+     System.out.println("Total charge " + charge);
+
+    }
+   else if(unit >= 201)
+   {
+     rate = 10;
+     int charge =(unit * rate ) + 300;
+     System.out.println("unit consumed" + unit);
+     System.out.println("rate per unit is " + rate);
+     System.out.println("Total charge " + charge);
+     
+   }
+}
+}
+
+
+
+
+
+
+ 
